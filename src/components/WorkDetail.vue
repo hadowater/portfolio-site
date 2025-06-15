@@ -4,7 +4,6 @@
     <div class="work-detail__text">
       <h1>{{ work.title }}</h1>
       <p class="workUrl">
-        <strong>URL：</strong>
         <a :href="work.url" target="_blank" rel="noopener">{{ work.url }}</a>
       </p>
       <h2>担当領域</h2>
