@@ -7,11 +7,11 @@ export const works = [
     image: "@/assets/works/portfolio/thumb.jpg",
     url: "https://matsuba-portfolio.netlify.app/#/",
     part: "デザイン、コーディング",
-    tools: ["Vue 3 / Vite / Vue Router / SCSS / Visual Studio Code / Figma / Netlify"],
+    tools: ["Vue 3 / Vite / Vue Router / SCSS / Visual Studio Code / Figma / Github / Netlify"],
     period: "2025年6月（約1週間）",
     description: '自身のポートフォリオを整理・公開するために制作したシングルページアプリケーション。Vue 3 と Vite による高速な開発環境を活かし、各作品の詳細ページへの遷移も含めて、スムーズなユーザー体験を実現している。',
     target: '採用担当者や制作関係者など、自身の実績をわかりやすく確認したいユーザーを想定。',
-    points: ["仮"]
+    points: [""]
   },
   {
     id: "work1",
