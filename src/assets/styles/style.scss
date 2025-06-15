@@ -1,0 +1,305 @@
+@import "@/assets/styles/mixin";
+
+$base: #F8EFE8;
+$nav_base: #FFFFFF;
+$base-font-color: #868686;
+$base-fontsize: 16px;
+$breakpoint-tablet: 1024px;
+$breakpoint-mobile: 640px;
+$readable: #460202;
+$linkText: #605BF9;
+
+.megrim-regular {
+  font-family: "Megrim", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+.inter-regular {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+body{
+  background-color: $base;
+  font-size : $base-fontsize;
+  color: $readable;
+  position: relative;
+
+
+}
+@include respond(pcWide) {
+
+}
+
+@include respond(pc) {}
+
+@include respond(tablet) {
+
+
+}
+
+@include respond(mobile) {}
+
+.h1-regular{
+  @extend .megrim-regular;
+  text-align: center;
+  font-size: 36px;
+  font-weight: bold;
+}
+
+/*-header-*/
+header{
+
+  background-color: $nav_base;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  position: sticky;
+    top: 0;
+
+  .logo{
+    width: 255px;
+    height:auto;
+    margin: 0 0 0 30px;
+  }
+}
+
+.header--nav{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+
+
+  nav ul {
+    display: flex;
+    justify-content: space-around;
+
+
+    li{
+      list-style-type: none;
+      margin: 0 30px;
+
+      a{
+        @extend .megrim-regular;
+        display: block;
+        color: $base-font-color;
+        font-size: $base-fontsize;
+      }
+    }
+  }
+}
+
+/*-about-*/
+.about{
+  max-width: $breakpoint-tablet;
+  margin: 230px auto 0;
+
+  h1{
+    @extend .megrim-regular;
+    font-size: 40px;
+    text-align: center;
+
+    span{
+      font-size: 20px;
+    }
+  }
+
+  .about--description {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 190px 0 0 0;
+
+    img{
+      width: 185px;
+      height: auto;
+    }
+    p{
+      padding: 0 0 0 60px;
+      @extend .inter-regular;
+      color:$readable;
+    }
+  }
+    @include respond(mobile) {
+
+      h1 {
+        font-size: 28px;
+      }
+      .about--description{
+        flex-direction: column;
+        align-items: center;
+        img {
+
+        }
+        p{
+          padding: 15px 0 0 0;
+        }
+      }
+    }
+}
+
+.works {
+  margin: 250px auto 0;
+  h1{
+    @extend .h1-regular;
+  }
+  &--container{
+    max-width: 1024px;
+    margin: 50px auto 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill , 200px);
+    justify-content: space-around;
+    gap: 3%;
+    &--items{
+      width: 200px;
+      height: auto;
+      margin: 0 10px 80px;
+
+      img{
+        width: 100%;
+      }
+    }
+
+  }
+}
+
+// work-detal
+.work-detail{
+  max-width: 1440px;
+  margin: 150px auto 30px;
+  display: flex;
+  justify-content: space-around;
+
+  &__text{
+    margin: 0 45px 0 0;
+
+
+    .workUrl{
+      margin: 0 0 30px 0;
+
+      a{
+        color: $linkText;
+      }
+    }
+
+    p{
+      margin: 0 0 10px;
+    }
+  }
+
+  &__image{
+    display: contents;
+
+    img {
+      max-width: 660px;
+        height: auto;
+    }
+  }
+
+  .backHome{
+    text-align: right;
+
+    a{
+      background-color: $readable;
+      text-align: right;
+      color:$base;
+      padding: 5px 20px;
+      border-radius: 30px;
+      transition: .2s;
+    }
+
+    a:hover{
+      background-color: $base;
+      color: $readable;
+      border: 1px solid $readable;
+    }
+  }
+
+
+    @include respond(pcWide) {
+      width: 90%;
+      margin: 150px 10px 30px;
+
+
+      &__image {
+        display: contents;
+
+        img {
+          width: 500px;
+        }
+      }
+    }
+
+    @include respond(pc) {}
+
+    @include respond(tablet) {
+      flex-direction: column;
+      margin: 50px auto 30px;
+
+      &__text {
+        margin: 0 auto 30px;
+      }
+    }
+
+    @include respond(mobile) {
+      &__image {
+          img {
+            width: 80%;
+            margin: 0 auto;
+          }
+        }
+
+    }
+}
+
+//ハンバーガーメニュー
+header {
+  position: relative;
+
+  .menu-toggle {
+    display: none;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  nav {
+    ul {
+      display: flex;
+      gap: 20px;
+    }
+  }
+}
+
+@include respond(mobile) {
+  header .menu-toggle {
+    display: block;
+  }
+
+  nav {
+    display: none;
+    &.open {
+        display: block;
+        position: absolute;
+        top: 80px;
+        right: 0;
+        background: white;
+        width: 200px;
+        padding: 0 20px;
+
+        ul {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+        }
+      }
+  }
+
+}
