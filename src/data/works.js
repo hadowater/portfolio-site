@@ -5,13 +5,13 @@ export const works = [
     id: "portfolio",
     title: "松葉貴史のポートフォリオ",
     image: "@/assets/works/portfolio/thumb.jpg",
-    url: "https://matsuba-portfolio.netlify.app/#/",
+    url: "https://matsuba-portfolio.netlify.app",
     part: "デザイン、コーディング",
     tools: ["Vue 3 / Vite / Vue Router / SCSS / Visual Studio Code / Figma / Github / Netlify"],
     period: "2025年6月（約1週間）",
     description: '自身のポートフォリオを整理・公開するために制作したシングルページアプリケーション。Vue 3 と Vite による高速な開発環境を活かし、各作品の詳細ページへの遷移も含めて、スムーズなユーザー体験を実現している。',
     target: '採用担当者や制作関係者など、自身の実績をわかりやすく確認したいユーザーを想定。',
-    points: [""]
+    points: ["Vue 3 + Vite + Vue Routerを活用し、軽量かつ拡張性の高いSPA構成を採用。今後の作品追加や機能拡張が容易な設計にした。","データ構造はworks.jsで一元管理し、v-forとルーティングを組み合わせて個別ページを自動生成できる仕組みを構築。","SCSSのmixin設計でレスポンシブ対応を効率化し、スマホ対応も考慮した設計を実現。","Github管理＋Netlify自動デプロイにより、更新時はgit pushのみで即時公開できるCI/CD運用を構築。"]
   },
   {
     id: "work1",
