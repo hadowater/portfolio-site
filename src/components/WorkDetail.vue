@@ -1,4 +1,3 @@
-<!-- src/views/WorkDetail.vue -->
 <template>
   <div class="work-detail" v-if="work">
     <div class="work-detail__text">
@@ -17,14 +16,18 @@
       <h2>ターゲット</h2>
       <p>{{ work.target }}</p>
       <h2>工夫した点</h2>
-      <p v-for="(point, index) in work.points" :key="index">{{ point }}</p>
+      <ul>
+        <li v-for="(point, index) in work.points" :key="index">{{ point }}</li>
+      </ul>
 
       <div class="backHome"><router-link to="/">戻る</router-link></div>
     </div>
+
     <div class="work-detail__image">
-      <img :src="getImageUrl(work.id)" :alt="work.title" />
+      <img v-for="(img, index) in work.screenshots" :key="index" :src="img" :alt="`${work.title} スクリーンショット${index + 1}`" />
     </div>
   </div>
+
   <div v-else>
     <p>作品が見つかりませんでした。</p>
   </div>
@@ -36,8 +39,4 @@ import { works } from "@/data/works";
 
 const route = useRoute();
 const work = works.find((w) => w.id === route.params.id);
-
-function getImageUrl(id) {
-  return new URL(`../assets/works/${id}/screenshot.jpg`, import.meta.url).href;
-}
 </script>

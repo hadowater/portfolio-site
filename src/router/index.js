@@ -20,7 +20,18 @@ const routes = [
 
 const router = createRouter({
   history: createWebHistory(),
-  routes // ✅ここがポイント
+  routes,
+
+
+    // 画面遷移時にトップへスクロール
+    scrollBehavior(to, from, savedPosition) {
+      // 戻るボタンとかなら savedPosition にスクロール位置がある
+      if (savedPosition) {
+        return savedPosition
+      } else {
+        return { top: 0 }
+      }
+    }
 })
 
 export default router
