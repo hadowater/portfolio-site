@@ -101,7 +101,7 @@ export const works = [
     ],
     url: "http://sashc.xsrv.jp/
     tools: ["Visual Studio Code / WordPress / Xserver / Google Chrome / Git（簡易的に利用）"],
-    period: "約1週間",
+    period: "2025年5月（約1週間）",
     description: 'WordPressの仕組みを理解することを目的に、既存テーマをベースにオリジナルの外観・構成へカスタマイズし、実際にXserver上に公開しました。記事一覧ページ・個別ページのテンプレート構造を学びながら、CSS設計やパーマリンクの動作などのWordPress特有の挙動も確認しました。',
     target: 'ブログ形式で情報を発信したい個人クリエイターや、小規模事業者のサイト運営を想定。',
     points: [
