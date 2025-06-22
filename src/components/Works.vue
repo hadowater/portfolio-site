@@ -1,7 +1,7 @@
 <!-- src/views/Works.vue -->
 <template>
-  <section id="works" class="works">
-    <h1>WORKS</h1>
+  <section class="works">
+    <h1 id="works">WORKS</h1>
     <div class="works--container">
       <div class="works--container--items" v-for="work in works" :key="work.id">
         <router-link :to="`/works/${work.id}`">
