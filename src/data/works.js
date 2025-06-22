@@ -100,6 +100,7 @@ export const works = [
       new URL("@/assets/works/wordpress/screenshot.jpg", import.meta.url).href,
     ],
     url: "http://sashc.xsrv.jp/",
+    part: "WordPressテーマのカスタマイズ、デプロイ（Xserverへのアップロード）、パーマリンク設定、テンプレート修正。",
     tools: ["Visual Studio Code / WordPress / Xserver / Google Chrome / Git（簡易的に利用）"],
     period: "2025年5月（約1週間）",
     description: '職業訓練の講義内容に従い、WordPressの仕組みを理解することを目的に、既存テーマをベースにオリジナルの外観・構成へカスタマイズし、実際にXserver上に公開しました。記事一覧ページ・個別ページのテンプレート構造を学びながら、CSS設計やパーマリンクの動作などのWordPress特有の挙動も確認しました。',
