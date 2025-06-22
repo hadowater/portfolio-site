@@ -6,6 +6,7 @@
       <div class="works--container--items" v-for="work in works" :key="work.id">
         <router-link :to="`/works/${work.id}`">
           <img :src="getThumbUrl(work.id)" :alt="work.title" />
+          <p class="work-title">{{ work.title }}</p>
         </router-link>
       </div>
     </div>
