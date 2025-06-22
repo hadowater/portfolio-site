@@ -99,10 +99,10 @@ export const works = [
     screenshots: [
       new URL("@/assets/works/wordpress/screenshot.jpg", import.meta.url).href,
     ],
-    url: "http://sashc.xsrv.jp/
+    url: "http://sashc.xsrv.jp/",
     tools: ["Visual Studio Code / WordPress / Xserver / Google Chrome / Git（簡易的に利用）"],
     period: "2025年5月（約1週間）",
-    description: 'WordPressの仕組みを理解することを目的に、既存テーマをベースにオリジナルの外観・構成へカスタマイズし、実際にXserver上に公開しました。記事一覧ページ・個別ページのテンプレート構造を学びながら、CSS設計やパーマリンクの動作などのWordPress特有の挙動も確認しました。',
+    description: '職業訓練の講義内容に従い、WordPressの仕組みを理解することを目的に、既存テーマをベースにオリジナルの外観・構成へカスタマイズし、実際にXserver上に公開しました。記事一覧ページ・個別ページのテンプレート構造を学びながら、CSS設計やパーマリンクの動作などのWordPress特有の挙動も確認しました。',
     target: 'ブログ形式で情報を発信したい個人クリエイターや、小規模事業者のサイト運営を想定。',
     points: [
       "投稿一覧ページ（/news/）や個別記事のテンプレート表示がうまくいかない場面で、テーマのindex.phpが404専用の構造になっていることに気づき、WordPressのテンプレート階層とループ処理を学びながら修正しました。また、パーマリンク設定やスラッグの扱いで記事が表示されない原因も調査・修正するなど、エラー解決のプロセスも含めて理解を深めました。"
