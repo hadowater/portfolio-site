@@ -8,7 +8,7 @@
       <h2>担当領域</h2>
       <p>{{ work.part }}</p>
       <h2>使用ツール</h2>
-      <p>{{ work.tools.join(", ") }}</p>
+      <p>{{ work.tools }}</p>
       <h2>制作期間</h2>
       <p>{{ work.period }}</p>
       <h2>概要</h2>
